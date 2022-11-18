@@ -8,6 +8,7 @@
   background-color: cyan;
   height: 100vh;
   padding: 10px;
+  position: relative;
 }
 .main > div {
   background-color: rgba(255, 255, 255, 0.8);
@@ -16,9 +17,31 @@
 
 form {
   border: solid 10px black;
-text-align: center;
-background-color: gray;
-display: inline-block;
-padding: 70px;
-border-radius: 200px;
+  text-align: center;
+  background-color: gray;
+  display: inline-block;
+  padding: 70px;
+  border-radius: 200px;
+  position: absolute;
+  translate: -50% -50%;
+  left: 50%;
+  top: 50%;
+}
+
+@keyframes leftroom {
+  from {
+    right: 0%;
+  }
+  to {
+    right: -150%;
+  }
+}
+.left {
+  position: absolute;
+  animation: leftroom 5s ease-in-out;
+  animation-delay: 3s;
+  height: 100vh;
+  width: 50vw;
+  border: 5px solid red;
+  right:0;
 }
