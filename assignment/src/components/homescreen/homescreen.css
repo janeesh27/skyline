@@ -11,12 +11,13 @@
   position: relative;
 }
 .main > div {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color:black;
   padding: 10px;
+  
 }
 
 form {
-  border: solid 10px black;
+  border: solid 10px cyan;
   text-align: center;
   background-color: gray;
   display: inline-block;
@@ -28,7 +29,7 @@ form {
   top: 50%;
 }
 
-@keyframes leftroom {
+@keyframes rightroom {
   from {
     right: 0%;
   }
@@ -36,12 +37,33 @@ form {
     right: -150%;
   }
 }
+
+@keyframes leftroom {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -150%;
+  }
+}
+
 .left {
   position: absolute;
   animation: leftroom 5s ease-in-out;
   animation-delay: 3s;
   height: 100vh;
   width: 50vw;
-  border: 5px solid red;
-  right:0;
+  border: 5px solid cyan;
+  left: 0;
+  opacity: .5;
+}
+.right {
+  position: absolute;
+  animation: rightroom 5s ease-in-out;
+  animation-delay: 3s;
+  height: 100vh;
+  width: 50vw;
+  border: 5px solid cyan;
+  right: 0;
+opacity: .5;
 }
