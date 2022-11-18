@@ -14,7 +14,7 @@ const Homescreen = () => {
           <input type="password"></input>
           <br></br>
           <br></br>
-          <button>login</button>
+          <button>Login</button>
         </form>
       </div>
     </div>

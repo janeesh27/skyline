@@ -3,7 +3,7 @@
 }
 .main {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 50vw 50vw;
   column-gap: 10px;
   background-color: cyan;
   height: 100vh;
@@ -11,15 +11,14 @@
   position: relative;
 }
 .main > div {
-  background-color:black;
+  background-color: black;
   padding: 10px;
-  
 }
 
 form {
-  border: solid 10px cyan;
+  border: solid 5px cyan;
   text-align: center;
-  background-color: gray;
+  background-color:black;
   display: inline-block;
   padding: 70px;
   border-radius: 200px;
@@ -27,6 +26,9 @@ form {
   translate: -50% -50%;
   left: 50%;
   top: 50%;
+}
+form h3{
+  color:white;
 }
 
 @keyframes rightroom {
@@ -55,7 +57,7 @@ form {
   width: 50vw;
   border: 5px solid cyan;
   left: 0;
-  opacity: .5;
+  opacity: 0.7;
 }
 .right {
   position: absolute;
@@ -65,5 +67,24 @@ form {
   width: 50vw;
   border: 5px solid cyan;
   right: 0;
-opacity: .5;
+  opacity: 0.7;
+}
+
+
+
+.login button{
+  padding: 12px;
+  font-size: larger;
+  font-weight: 500;
+  border: 3px solid cyan;
+  border-radius: 2rem;
+}
+
+.login input{
+  width: 10rem;
+  height: 1.25rem;
+  border:5px solid cyan;
+  border-radius: 5px;
+  background-color: black;
+  color: aqua;
 }
