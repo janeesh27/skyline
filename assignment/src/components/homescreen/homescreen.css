@@ -15,10 +15,32 @@
   padding: 10px;
 }
 
+.parts button {
+  padding: 15px;
+  border: 3px solid cyan;
+  border-radius: 5px;
+  position: absolute;
+  translate: -50% -50%;
+  left: 25%;
+  top: 25%;
+  font-size: larger;
+}
+.parts h1{
+  color: aqua;
+  padding: 2rem;
+  border: 3px solid cyan;
+  border-radius: 5px;
+  position: absolute;
+  translate: -50% -50%;
+  left: 25%;
+  top: 55%;
+  
+}
+
 form {
   border: solid 5px cyan;
   text-align: center;
-  background-color:black;
+  background-color: black;
   display: inline-block;
   padding: 70px;
   border-radius: 200px;
@@ -27,8 +49,8 @@ form {
   left: 50%;
   top: 50%;
 }
-form h3{
-  color:white;
+form h3 {
+  color: white;
 }
 
 @keyframes rightroom {
@@ -70,9 +92,7 @@ form h3{
   opacity: 0.7;
 }
 
-
-
-.login button{
+.login button {
   padding: 12px;
   font-size: larger;
   font-weight: 500;
@@ -80,10 +100,10 @@ form h3{
   border-radius: 2rem;
 }
 
-.login input{
+.login input {
   width: 10rem;
   height: 1.25rem;
-  border:5px solid cyan;
+  border: 5px solid cyan;
   border-radius: 5px;
   background-color: black;
   color: aqua;

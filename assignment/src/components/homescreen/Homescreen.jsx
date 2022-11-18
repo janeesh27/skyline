@@ -4,6 +4,11 @@ import "./homescreen.css";
 const Homescreen = () => {
   return (
     <div class="main">
+     
+      <div class="parts">
+      <button>EXIT</button>
+      <h1 id="countdown">00:10:00</h1>
+      </div>
       <div class="left"></div>
       <div class="right"></div>
 
@@ -11,10 +16,13 @@ const Homescreen = () => {
         <form>
           <h3>Enter Password</h3>
           <br></br>
-          <input type="password"></input>
+          <input
+            type="password"
+            placeholder="enter your password here.."
+          ></input>
           <br></br>
           <br></br>
-          <button>Login</button>
+          <button>Enter Lab</button>
         </form>
       </div>
     </div>
