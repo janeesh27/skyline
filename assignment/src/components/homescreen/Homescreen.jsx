@@ -1,13 +1,16 @@
 import React from 'react';
 import Loginfrom from '../Loginform';
 import './homescreen.css';
+import Timer from '../timer/Timer'
 
 const Homescreen = () => {
 	const [animation, setAnimation] = React.useState(false);
 
 	const getlogin = () => {
-		return localStorage.getItem('login');
+		return JSON.parse(localStorage.getItem('login'));
 	};
+
+	const [isLoggedIn, setIsLoggedIn] = React.useState(getlogin());
 
 	const setLogin = login => {
 		localStorage.setItem('login', login);
@@ -16,11 +19,18 @@ const Homescreen = () => {
 	return (
 		<div className="main">
 			<div className="parts">
-				<button>EXIT</button>
+				<button
+					onClick={() => {
+						setLogin(false);
+						setIsLoggedIn(false);
+						setAnimation(false);
+					}}>
+					EXIT
+				</button>
 				<h1 id="countdown">00:10:00</h1>
 			</div>
 
-			{getlogin() === 'true' ? null : (
+			{isLoggedIn ? null : (
 				<>
 					<div
 						className="left"
@@ -29,7 +39,12 @@ const Homescreen = () => {
 						className="right"
 						style={{ animation: animation ? 'rightroom 5s ease-in-out forwards' : '' }}></div>
 
-					<Loginfrom animation={animation} setAnimation={setAnimation} setLogin={setLogin} />
+					<Loginfrom
+						animation={animation}
+						setAnimation={setAnimation}
+						setLogin={setLogin}
+						setIsLoggedIn={setIsLoggedIn}
+					/>
 				</>
 			)}
 		</div>

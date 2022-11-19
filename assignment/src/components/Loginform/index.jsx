@@ -11,12 +11,10 @@ const Loginfrom = ({ animation, setAnimation, setLogin }) => {
 		e.preventDefault();
 		if (password === 'skyline') {
 			// animation for door and form
-
-			setTimeout(() => {
-				setLogin(true);
-			}, 6000);
-
-			return setAnimation(true);
+			setLogin(true);
+			setAnimation(true);
+			setPassword('');
+			return;
 		}
 		return alert('Login Failed, Please enter correct password');
 	};
@@ -26,7 +24,11 @@ const Loginfrom = ({ animation, setAnimation, setLogin }) => {
 			<form>
 				<h3>Enter Password</h3>
 				<br></br>
-				<input type="password" placeholder="enter your password here.." onChange={e => inputHandler(e)}></input>
+				<input
+					type="password"
+					placeholder="enter your password here.."
+					value={password}
+					onChange={e => inputHandler(e)}></input>
 				<br></br>
 				<br></br>
 				<button onClick={e => sumbitHandler(e)}>Enter Lab</button>
