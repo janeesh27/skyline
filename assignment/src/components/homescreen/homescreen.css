@@ -1,110 +1,135 @@
 * {
-  margin: 0;
+	margin: 0;
 }
+
+body {
+	overflow-x: hidden;
+}
+
 .main {
-  display: grid;
-  grid-template-columns: 50vw 50vw;
-  column-gap: 10px;
-  background-color: cyan;
-  height: 100vh;
-  padding: 10px;
-  position: relative;
+	display: grid;
+	grid-template-columns: 50vw 50vw;
+	column-gap: 10px;
+	background-color: cyan;
+	height: 100vh;
+	padding: 10px;
+	position: relative;
 }
 .main > div {
-  background-color: black;
-  padding: 10px;
+	background-color: black;
+	padding: 10px;
 }
 
 .parts button {
-  padding: 15px;
-  border: 3px solid cyan;
-  border-radius: 5px;
-  position: absolute;
-  translate: -50% -50%;
-  left: 25%;
-  top: 25%;
-  font-size: larger;
+	padding: 15px;
+	border: 3px solid cyan;
+	border-radius: 5px;
+	position: absolute;
+	translate: -50% -50%;
+	left: 25%;
+	top: 25%;
+	font-size: larger;
 }
-.parts h1{
-  color: aqua;
-  padding: 2rem;
-  border: 3px solid cyan;
-  border-radius: 5px;
-  position: absolute;
-  translate: -50% -50%;
-  left: 25%;
-  top: 55%;
-  
+.parts h1 {
+	color: aqua;
+	padding: 2rem;
+	border: 3px solid cyan;
+	border-radius: 5px;
+	position: absolute;
+	translate: -50% -50%;
+	left: 25%;
+	top: 55%;
 }
 
 form {
-  border: solid 5px cyan;
-  text-align: center;
-  background-color: black;
-  display: inline-block;
-  padding: 70px;
-  border-radius: 200px;
-  position: absolute;
-  translate: -50% -50%;
-  left: 50%;
-  top: 50%;
+	border: solid 5px cyan;
+	text-align: center;
+	background-color: black;
+	display: inline-block;
+	padding: 70px;
+	border-radius: 200px;
+	position: absolute;
+	translate: -50% -50%;
+	left: 50%;
+	top: 50%;
 }
 form h3 {
-  color: white;
-}
-
-@keyframes rightroom {
-  from {
-    right: 0%;
-  }
-  to {
-    right: -150%;
-  }
-}
-
-@keyframes leftroom {
-  from {
-    left: 0%;
-  }
-  to {
-    left: -150%;
-  }
+	color: white;
 }
 
 .left {
-  position: absolute;
-  animation: leftroom 5s ease-in-out;
-  animation-delay: 3s;
-  height: 100vh;
-  width: 50vw;
-  border: 5px solid cyan;
-  left: 0;
-  opacity: 0.7;
+	position: absolute;
+	animation-delay: 3s;
+	height: 100vh;
+	width: 50vw;
+	border: 5px solid cyan;
+	left: 0;
+	opacity: 0.7;
 }
+
 .right {
-  position: absolute;
-  animation: rightroom 5s ease-in-out;
-  animation-delay: 3s;
-  height: 100vh;
-  width: 50vw;
-  border: 5px solid cyan;
-  right: 0;
-  opacity: 0.7;
+	position: absolute;
+	animation-delay: 3s;
+	height: 100vh;
+	width: 50vw;
+	border: 5px solid cyan;
+	right: 0;
+	opacity: 0.7;
+}
+
+.right open {
+	animation: rightroom 5s ease-in-out 3s;
+}
+
+.left open {
+	animation: leftroom 5s ease-in-out 3s;
 }
 
 .login button {
-  padding: 12px;
-  font-size: larger;
-  font-weight: 500;
-  border: 3px solid cyan;
-  border-radius: 2rem;
+	padding: 12px;
+	font-size: larger;
+	font-weight: 500;
+	border: 3px solid cyan;
+	border-radius: 2rem;
 }
 
 .login input {
-  width: 10rem;
-  height: 1.25rem;
-  border: 5px solid cyan;
-  border-radius: 5px;
-  background-color: black;
-  color: aqua;
+	width: 10rem;
+	height: 1.25rem;
+	border: 5px solid cyan;
+	border-radius: 5px;
+	background-color: black;
+	color: aqua;
+}
+
+/* Animations Keyframes */
+
+/* DOOR ANIMATION */
+@keyframes rightroom {
+	from {
+		right: 0%;
+	}
+	to {
+		right: -150%;
+	}
+}
+
+@keyframes leftroom {
+	from {
+		left: 0%;
+	}
+	to {
+		left: -150%;
+	}
+}
+
+/* FORM ANIMATION */
+
+@keyframes fade {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
 }
